@@ -1,0 +1,162 @@
+*, 
+*::before, 
+*::after{
+    box-sizing: border-box;
+}
+
+*{
+    font: inherit; 
+}
+
+body{
+    background-color: antiquewhite;
+}
+
+main{
+    position: relative; 
+    margin-inline: auto;
+    border: 1px solid red; 
+    width: 50rem; 
+    height: 25rem;
+}
+
+.word-display{
+    display: flex;
+    gap: 1rem; 
+}
+
+.keyboard-display{
+    position: absolute;
+    padding: 1rem; 
+    bottom: 0; 
+    font-size: 2rem;
+    background-color: red;
+}
+
+.top-row > *{
+    text-align: center;
+    border-radius: 0.5rem;
+    border: 1px solid black; 
+    display: inline-block; 
+    width: 2rem; 
+}
+
+.middle-row{
+    text-align: center; 
+    margin-block: 1rem; 
+}
+
+.middle-row > *{
+    border-radius: 0.5rem;
+    border: 1px solid black; 
+    text-align: center;
+    display: inline-block; 
+    width: 2rem; 
+}
+
+.bottom-row{
+    text-align: center;
+}
+
+.bottom-row > *{
+    border-radius: 0.5rem;
+    border: 1px solid black; 
+    text-align: center;
+    display: inline-block; 
+    width: 2rem; 
+}
+span{
+    white-space: pre;
+}
+
+span[data-letter]{
+    display: block;
+    white-space: pre;
+    border-bottom: 1px solid black;
+    width: 1rem; 
+    height: 1rem;
+    text-align: center;
+}
+
+
+.doll-display{
+    margin-inline-start: auto;
+    width: 10rem;
+}
+
+.stick-man{
+    position: relative; 
+}
+
+.stick-man > *{
+    position:absolute; 
+    background-color: black;
+}
+
+.head[data-visible="true"]{
+    border-radius: 5rem;
+    background-color: green;
+    border: 1px solid red; 
+    height: 5rem;
+    width: 5rem;
+}
+
+.upper-body[data-visible="true"]{
+    position: relative; 
+    top: 4.9rem;
+    border-start-end-radius: 1rem;
+    border-start-start-radius: 1rem;
+    left: 30px;  
+    width: 20px;
+    height: 170px; 
+}
+
+.upper-body > *{ 
+    background-color: black;
+    position: absolute; 
+}
+
+.upper-body .left[data-visible="true"]{
+    left: 4px;
+    border-start-start-radius: 10px;
+    top: 30px; 
+    width: 5rem; 
+    transform: rotate(45deg);
+    height: 1rem;
+}
+
+.upper-body .right[data-visible="true"]{
+    right: 3px;
+    border-end-start-radius: 10px;; 
+    top: 31px; 
+    width: 5rem; 
+    transform: rotate(130deg);
+    height: 1rem;
+}
+
+.lower-body{
+    position: relative; 
+}
+
+.lower-body > *{
+    background-color: black;
+    position: absolute; 
+}
+
+.lower-body .left[data-visible="true"]{
+    width: 5rem;
+    height: 1rem;
+    transform: rotate(55deg);
+    left: 30px; 
+    border-start-start-radius: 10px;
+    top: 90px;
+}
+
+.lower-body .right[data-visible="true"]{
+    width: 5rem;
+    height: 1rem;
+    transform: rotate(120deg); 
+    left: -26px;
+    border-end-start-radius: 10px;
+    top: 90px;
+}
